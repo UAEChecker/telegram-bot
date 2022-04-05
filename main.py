@@ -81,7 +81,7 @@ def masg(call):
         		data_checker = {
             		'requested_username': user,
             		'xsrf_token': 'qguFhKiP7FrimtibnGvopQ'}
-        		req_checker = requests.post(url, data=data_checker, headers=headers_check)
+        		response = requests.get(url, data=data_checker, headers=headers_check)
 			if response.text.find('If you have <strong>Telegram</strong>, you can contact <a class="tgme_username_link"')>=0:
 				ok+=1
 				sk+=1
@@ -128,19 +128,14 @@ def masg(call):
         		'origin': 'https://accounts.snapchat.com',
         		'referer': 'https://accounts.snapchat.com/',
         		'sec-fetch-dest': 'empty',
-        		'sec-fetch-mode': 'same-origin',
+  		        'sec-fetch-mode': 'same-origin',
         		'sec-fetch-site': 'same-origin',
         		'user-agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.182 Safari/537.36'
         		}
         		data_checker = {
             		'requested_username': user,
             		'xsrf_token': 'qguFhKiP7FrimtibnGvopQ'}
-        		req_checker = requests.post(url, data=data_checker, headers=headers_check)
-            #"User-Agent": generate_user_agent(),
-            #"Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8",
-            #"Accept-Encoding": "gzip, deflate, br",
-            #"Accept-Language" : "ar-EG,ar;q=0.9,en-US;q=0.8,en;q=0.7"}
-			#response = requests.get(url, headers=headers)
+  		     	response = requests.get(url, data=data_checker, headers=headers_check)
 			if response.text.find('If you have <strong>Telegram</strong>, you can contact <a class="tgme_username_link"')>=0:
 				ok+=1
 				sk+=1
