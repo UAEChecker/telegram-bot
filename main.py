@@ -1,4 +1,4 @@
-import requests,user_agent,json,flask,telebot,random,os,sys,time
+import requests,user_agent,json,flask,telebot,random,os,sys
 import telebot
 from telebot import types
 from user_agent import generate_user_agent
@@ -23,7 +23,7 @@ def boten(message):
     
     E = types.InlineKeyboardButton(text ="USER (BFFF2)", callback_data="F2")
     
-    M = types.InlineKeyboardButton('المطور', url='https://t.me/uaechecker')
+    M = types.InlineKeyboardButton('المطور', url='https://t.me/SidraTools')
     
     mas.add(A,E,M)
     
@@ -63,25 +63,16 @@ def masg(call):
 			un = str(''.join(random.choice(xn)for i in range(1)))
 			ua = str(''.join(random.choice(xa)for i in range(1)))
 			username = str(us)+str(un)+str(un)+str(un)+str(ua)
-			url = "https://accounts.snapchat.com/accounts/get_username_suggestions"
+			url = "https://t.me/"+str(username)
 			headers = {
-			'accept': '*/*',
-		        'accept-encoding': 'gzip, deflate, br',
-        		'accept-language': 'en-US,en;q=0.9',
-        		'content-length': '57',
-        		'content-type': 'application/x-www-form-urlencoded; charset=utf-8',
-        		'cookie': 'xsrf_token=qguFhKiP7FrimtibnGvopQ; web_client_id=6dee3ce3-db42-4fd0-b538-682cdb294f9a; _scid=482919d7-1390-46c8-8951-d3031e352b63; _sca={%22cid%22:%22e22c1577-7f73-4b69-85ff-79b72444951a%22%2C%22token%22:%22v1.key.2020-03-05_UKiB4eNE.iv.MeUzIJboKx7l+nZu.zf9r/dgUl/1vg1iBp4fz27qapzxGL1VJowr9Clna1AvHYCTUocABFHpeSMdPC2BGmfDmAfrA8eEqFPnV5qNP/QJCPISHEUpj7aGeYGpoggjapYZZ%22}; sc-cookies-accepted=true; Preferences=true; Performance=true; Marketing=true; _ga=GA1.2.148694331.1613677502; _gid=GA1.2.1609447525.1613677502; _gat_UA-41740027-4=1',
-        		'origin': 'https://accounts.snapchat.com',
-        		'referer': 'https://accounts.snapchat.com/',
-        		'sec-fetch-dest': 'empty',
-        		'sec-fetch-mode': 'same-origin',
-        		'sec-fetch-site': 'same-origin',
-        		'user-agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.182 Safari/537.36'
-        		}
-        		data_checker = {
-            		'requested_username': user,
-            		'xsrf_token': 'qguFhKiP7FrimtibnGvopQ'}
-        		response = requests.get(url, data=data_checker, headers=headers_check)
+            "User-Agent": generate_user_agent(),
+            "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8",
+            "Accept-Encoding": "gzip, deflate, br",
+            "Accept-Language" : "ar-EG,ar;q=0.9,en-US;q=0.8,en;q=0.7"}
+			response = requests.get(url, headers=headers)
+
+
+			
 			if response.text.find('If you have <strong>Telegram</strong>, you can contact <a class="tgme_username_link"')>=0:
 				ok+=1
 				sk+=1
@@ -95,7 +86,7 @@ def masg(call):
 				E = types.InlineKeyboardButton(f'EROR : {cp}', callback_data="1x")
 				B = types.InlineKeyboardButton(f'{username}', callback_data="1x")
 				R = types.InlineKeyboardButton(f'{sk}', callback_data="1x")
-				M = types.InlineKeyboardButton('المطور', url='https://t.me/uaechecker')
+				M = types.InlineKeyboardButton('المطور', url='https://t.me/UAE60')
 				mas.add(A,E,B,R,M)
 				bot.edit_message_text(chat_id=call.message.chat.id,message_id=call.message.message_id,text="ok start",reply_markup=mas)
 				
@@ -117,30 +108,18 @@ def masg(call):
 			ua = str(''.join(random.choice(xa)for i in range(1)))
 			bs = str(''.join(random.choice(xm)for i in range(1))) 
 			username = str(us)+str(un)+str(un)+str(un)+str(bs)
-			url = "https://accounts.snapchat.com/accounts/get_username_suggestions"
+			url = "https://t.me/"+str(username)
 			headers = {
-			'accept': '*/*',
-		        'accept-encoding': 'gzip, deflate, br',
-        		'accept-language': 'en-US,en;q=0.9',
-        		'content-length': '57',
-        		'content-type': 'application/x-www-form-urlencoded; charset=utf-8',
-        		'cookie': 'xsrf_token=qguFhKiP7FrimtibnGvopQ; web_client_id=6dee3ce3-db42-4fd0-b538-682cdb294f9a; _scid=482919d7-1390-46c8-8951-d3031e352b63; _sca={%22cid%22:%22e22c1577-7f73-4b69-85ff-79b72444951a%22%2C%22token%22:%22v1.key.2020-03-05_UKiB4eNE.iv.MeUzIJboKx7l+nZu.zf9r/dgUl/1vg1iBp4fz27qapzxGL1VJowr9Clna1AvHYCTUocABFHpeSMdPC2BGmfDmAfrA8eEqFPnV5qNP/QJCPISHEUpj7aGeYGpoggjapYZZ%22}; sc-cookies-accepted=true; Preferences=true; Performance=true; Marketing=true; _ga=GA1.2.148694331.1613677502; _gid=GA1.2.1609447525.1613677502; _gat_UA-41740027-4=1',
-        		'origin': 'https://accounts.snapchat.com',
-        		'referer': 'https://accounts.snapchat.com/',
-        		'sec-fetch-dest': 'empty',
-  		        'sec-fetch-mode': 'same-origin',
-        		'sec-fetch-site': 'same-origin',
-        		'user-agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.182 Safari/537.36'
-        		}
-        		data_checker = {
-            		'requested_username': user,
-            		'xsrf_token': 'qguFhKiP7FrimtibnGvopQ'}
-  		     	response = requests.get(url, data=data_checker, headers=headers_check)
+            "User-Agent": generate_user_agent(),
+            "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8",
+            "Accept-Encoding": "gzip, deflate, br",
+            "Accept-Language" : "ar-EG,ar;q=0.9,en-US;q=0.8,en;q=0.7"}
+			response = requests.get(url, headers=headers)
 			if response.text.find('If you have <strong>Telegram</strong>, you can contact <a class="tgme_username_link"')>=0:
 				ok+=1
 				sk+=1
 				bot.send_message(call.message.chat.id,f"‹ ᴜѕᴇʀɴᴀᴍᴇ ᴛᴇʟᴇɢʀᴀᴍ  ✓\n────── • ✧✧ • ──────\n‹ ᴜѕᴇʀɴᴀᴍᴇ : @{username}\n────── • ✧✧ • ──────\n• @UAE60")
-				#+str(username)
+				
 			else:
 				cp+=1
 				sk+=1
