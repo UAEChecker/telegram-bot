@@ -23,11 +23,11 @@ def boten(message):
     
     E = types.InlineKeyboardButton(text ="USER (BFFF2)", callback_data="F2")
     
-    M = types.InlineKeyboardButton('المطور', url='https://t.me/SidraTools')
+    M = types.InlineKeyboardButton('المطور', url='https://t.me/uae60')
     
     mas.add(A,E,M)
     
-    bot.send_message(message.chat.id, f"- أهلاً بكً  !\n\n- بوت تشكير يوزرات تلجرام 🧑‍💻\n\n♻️ لوحة التحكم الخاصه بك ♨️",reply_markup=mas)
+    bot.send_message(message.chat.id, f"- تشكير يوزرات تيليقرام 🧑‍💻\n\n @UAE60",reply_markup=mas)
     
     
 @bot.callback_query_handler(func=lambda call: True)
@@ -48,7 +48,7 @@ def masg(call):
 		
 		M = types.InlineKeyboardButton('المطور', url='https://t.me/SidraTools')
 		
-		bot.edit_message_text(chat_id=call.message.chat.id,message_id=call.message.message_id, text="- أهلاً بكً عزيزي المستخدم \n\n- بوت تشكير يوزرات تلجرام 🧑‍💻\n\n♻️ لوحة التحكم الخاصه بك ♨️",reply_markup=mas)
+		bot.edit_message_text(chat_id=call.message.chat.id,message_id=call.message.message_id, text="- تشكير يوزرات تيليقرام 🧑‍💻\n\n @UAE60",reply_markup=mas)
 
 	elif call.data =="F1":
 		
@@ -73,7 +73,7 @@ def masg(call):
 			if response.text.find('If you have <strong>Telegram</strong>, you can contact <a class="tgme_username_link"')>=0:
 				ok+=1
 				sk+=1
-				bot.send_message(call.message.chat.id,f"‹ ᴜѕᴇʀɴᴀᴍᴇ ᴛᴇʟᴇɢʀᴀᴍ  ✓\n────── • ✧✧ • ──────\n‹ ᴜѕᴇʀɴᴀᴍᴇ : @{username}\n────── • ✧✧ • ──────\n• @SidraTools")
+				bot.send_message(call.message.chat.id,f"‹ ᴜѕᴇʀɴᴀᴍᴇ ᴛᴇʟᴇɢʀᴀᴍ  ✓\n────── • ✧✧ • ──────\n‹ ᴜѕᴇʀɴᴀᴍᴇ : @{username}\n────── • ✧✧ • ──────\n• @UAE60")
 				
 			else:
 				cp+=1
