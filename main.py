@@ -51,4 +51,8 @@ def h2(message):
         
             mees.add(trakos,buut1,buut5)
             bot.edit_message_text(chat_id=message.chat.id,message_id=message.message_id,text="<strong>Bot Started ✅</strong>",parse_mode='html',reply_markup=mees)
-bot.polling() 
+        if __name__ == "__main__":
+            bot.remove_webhook()
+            bot.set_webhook(url="https://coinsinstabot.herokuapp.com/"+str(BOT_TOKEN))
+            server.run(host="0.0.0.0", port=int(os.environ.get("PORT", 5000)))
+
