@@ -5,7 +5,7 @@ from user_agent import generate_user_agent
 import logging
 from config import *
 from flask import Flask, request
-from telebot import types 
+ 
 
 bot = telebot.TeleBot(BOT_TOKEN)
 server = Flask(__name__)
