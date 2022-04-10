@@ -1,11 +1,8 @@
-import requests,user_agent,json,flask,telebot,random,os,sys
 import telebot
-from telebot import types
-from user_agent import generate_user_agent
-import logging
-from config import *
-from flask import Flask, request
- 
+import requests
+import os
+import json 
+from telebot import types 
 
 bot = telebot.TeleBot(BOT_TOKEN)
 server = Flask(__name__)
