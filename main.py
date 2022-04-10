@@ -6,15 +6,14 @@ import logging
 from config import *
 from flask import Flask, request
 from telebot import types 
+
 bot = telebot.TeleBot(BOT_TOKEN)
 server = Flask(__name__)
 logger = telebot.logger
 logger.setLevel(logging.DEBUG)
 
 
-token = input("[~] Enter Token :")
-bot = telebot.TeleBot(token)
-p1 = types.InlineKeyboardButton(text ="- Run",callback_data = 'n3')
+
 @bot.message_handler(commands=["start"])
 def start(message):
     maac = types.InlineKeyboardMarkup()
