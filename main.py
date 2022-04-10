@@ -1,8 +1,17 @@
+import requests,user_agent,json,flask,telebot,random,os,sys
 import telebot
-import requests
-import os
-import json 
+from telebot import types
+from user_agent import generate_user_agent
+import logging
+from config import *
+from flask import Flask, request
 from telebot import types 
+bot = telebot.TeleBot(BOT_TOKEN)
+server = Flask(__name__)
+logger = telebot.logger
+logger.setLevel(logging.DEBUG)
+
+
 token = input("[~] Enter Token :")
 bot = telebot.TeleBot(token)
 p1 = types.InlineKeyboardButton(text ="- Run",callback_data = 'n3')
