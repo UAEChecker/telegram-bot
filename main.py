@@ -13,9 +13,9 @@ logger = telebot.logger
 logger.setLevel(logging.DEBUG)
 
 
-
-@bot.message_handler(commands=["start"])
-def start(message):
+@bot.message_handler(commands=['start'])
+def boten(message):
+    
     maac = types.InlineKeyboardMarkup()
     maac.row_width = 1
     maac.add(p1)
